@@ -1,0 +1,42 @@
+.shapebtn{
+    background: #6c757d;
+    border: none !important;
+    color:white;
+}
+.sharebtn{
+    background: #6c757d;
+    border: none !important;
+    color:white;
+}
+.leftbtn{
+
+    border-radius: 5px 0px 0px 5px;
+}
+.rightbtn{
+
+    border-radius: 0px 5px 5px 0px;
+}
+.shapebtn:hover{
+    background: #5a6268;
+    border: none !important;
+    color:white;
+}
+.sharebtn:hover{
+    background: #5a6268;
+    border: none !important;
+    color:white;
+}
+.shapebtn:focus{
+    background: #42484d;
+    border: none !important;
+    color:white;
+    outline: 0;
+}
+.sharebtn:focus{
+    border: none !important;
+    outline: 0;
+}
+
+
+
+

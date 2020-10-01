@@ -1,0 +1,23 @@
+  
+  <!-- ToolBox -->
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <button type="button" class="shapebtn leftbtn" id="circleEl" (click)="setTypeToEllipse()" >Circle</button>
+    <button type="button" class="shapebtn" id="squareEl" (click)="setTypeToRectangle()" >Square</button>
+    <label class="btn btn-secondary">
+      Stroke: <input type="color" id="strokeEl" (change)="setStrokeColor($event.target.value)"> 
+    </label>
+    <label class="btn btn-secondary">
+      Background: <input type="color"  id="backgroundEl" [ngModel]="backgroundColor" (change)="setBackgroundColor($event.target.value)">
+    </label>
+    <label class="btn btn-secondary">
+      Opacity: <input type="range"  id="opacityEl" value="50" [ngModel]="opacityValue" (change)="setOpacity($event.target.value)"> 
+    </label>
+    <button type="button" class="sharebtn" id="watchingEl" (click)="getWatching()" >Watching</button>
+    <button type="button" class="sharebtn" id="shareEl" (click)="getSharedUsers()" >Share</button>
+    <button type="button" class="sharebtn rightbtn" id="unshareEl" (click)="getUnSharedUsers()">UnShare</button>
+  </div>
+
+
+
+
+  

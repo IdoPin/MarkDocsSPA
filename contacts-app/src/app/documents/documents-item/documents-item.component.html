@@ -1,0 +1,15 @@
+<div class="card" style="width: 13rem;" [ngStyle]="{'border-radius': '15px','box-shadow':' 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}">
+    <img src={{Document.ImageURL}} class="card-img-top" alt="..." [ngStyle]="{'border-radius': '15px 15px 0px 0px',  'height': '200px','width': '200px'}">
+    <div class="card-body" [ngStyle]="{'background-color':'AliceBlue','border-radius': '0px 0px 15px 15px'}">
+      <h5 >{{Document.DocumentName}}</h5>
+      <p>by {{Document.UserID}}</p>
+      <div>
+      <div class="text-center">
+        <button type="button" class="btn btn-outline-primary" [ngStyle]="{'margin':'5px'}" (click)="onClickEditBtn()"><i class="fa fa-edit"></i></button>
+        <button type="button" class="btn btn-outline-info" [ngStyle]="{'margin':'5px'}" (click)="onClickDeleteBtn()"><i class="fa fa-trash-o"></i></button>
+      </div>
+    </div>
+  </div>
+
+
+

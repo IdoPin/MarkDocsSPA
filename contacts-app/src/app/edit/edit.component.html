@@ -1,0 +1,46 @@
+<app-header></app-header>
+<h1>
+  {{myDocument.DocumentName}}
+</h1>
+<h5>
+  By {{myDocument.UserID}}
+</h5>
+  <!-- <button type="button" #btnEllipse onclick="setTypeToEllipse()">Ellipse</button>
+  <button type="button" #btnRectangle onclick="setTypeToRectangle()">Rectangle</button> -->
+  <!-- <button type="button"  onclick="setTypeToEllipse()">Ellipse</button>
+  <button type="button"  onclick="setTypeToRectangle()">Rectangle</button> -->
+  <!-- <div class="row" style="padding-left: 1.5%;">
+    <button #btnCancel>Connect</button>
+  </div> -->
+  <div class="row" style="padding-left: 1.5%;">
+    <app-edit-toolbar></app-edit-toolbar>
+  </div>
+
+  <div class="row">
+    <div class="col">
+  <div #container id="container"  style = 'height:800px;width:800px;border: 2px solid cadetblue;' [ngStyle]="setDocumentImage()">
+      <!-- <div #container id="container"  style = 'height:800px;width:800px;border: 2px solid cadetblue;' > -->
+     
+        <canvas #shapeCanvas class='canvas' ></canvas>
+        <canvas #drawingCanvas class='canvas' ></canvas>
+
+      </div>
+    </div>
+    <div class="col">
+      <div class="userDetails">
+        <div class="sharedUsers" *ngIf="showSharedUsers">
+          <h6 class="userTitle">Choose user to unShare:</h6>
+          <button type="button" class="userBtn" *ngFor="let btnEle of sharedUsers" (click)="unShareUser($event.target.innerText)">{{btnEle}}</button>
+        </div>
+        <div class="unSharedUsers" *ngIf="showUnSharedUsers">
+          <h6 class="userTitle">Choose user to Share:</h6>
+          <button type="button" class="userBtn" *ngFor="let btnEle of unSharedUsers" (click)="shareUser($event.target.innerText)">{{btnEle}}</button>
+        </div>
+        <div class="WatchingdUsers" *ngIf="showWatchingUsers">
+          <h6 class="userTitle">Watching:</h6>
+          <button type="button" class="userBtn" *ngFor="let btnEle of watchingUsers">{{btnEle}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+

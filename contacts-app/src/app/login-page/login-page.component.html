@@ -1,0 +1,25 @@
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+     <h2>Log-in</h2>
+    </div>
+
+    <!-- Login Form -->
+    <form (ngSubmit)="onClickSumbit()" [formGroup]="form">
+      <input type="text" id="login" class="fadeIn second" name="userName" placeholder="User Name" formControlName="UserName">
+      <input type="text" id="email" class="fadeIn third"  name="email" placeholder="Email" formControlName="UserID"> 
+      <p class="text-danger" *ngIf="incorrect" [ngStyle]="{'font-size': '12px'}">Incorrect username or password</p>
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/sign-up">Sign-Up</a>
+    </div>
+
+  </div>
+</div>

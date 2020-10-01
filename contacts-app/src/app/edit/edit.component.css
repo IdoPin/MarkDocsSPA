@@ -1,0 +1,33 @@
+#container { position: relative; }
+.canvas { position: absolute; top: 0; left: 0; background-color: transparent; }
+
+.userBtn{
+    background-color: cadetblue;
+    color: white;
+    outline: 0;
+    border: none;
+}
+.userBtn:hover{
+    background-color: rgb(70, 117, 119);
+}
+.userTitle{
+    background-color: cadetblue;
+    width: fit-content;
+    padding: 2px;
+    position: relative;
+    top: 8px;
+}
+
+.userDetails{
+    position: relative;
+    right: 30px;
+    bottom: 8px;
+    
+}
+h5{
+    color: gray;
+    font-size: 15px;
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}

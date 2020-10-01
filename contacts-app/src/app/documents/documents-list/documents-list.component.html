@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>My Documents:</h2>
+    <app-uploading-documents></app-uploading-documents> 
+    <div class="row">
+        <div class="col-sm-2" [ngStyle]="{'margin':'15px'}" *ngFor="let docEle of DocumentsList">
+            <app-documents-item [Document]="docEle"></app-documents-item>
+            <br>
+        </div>
+    </div>
+</div>

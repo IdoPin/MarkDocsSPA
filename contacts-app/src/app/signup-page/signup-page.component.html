@@ -1,0 +1,26 @@
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+     <h2>Sign-Up</h2>
+    </div>
+
+    <!-- Login Form -->
+    <form  (ngSubmit)="onClickSumbit()" [formGroup]="form">
+      <input type="text" id="login" class="fadeIn second" ngModel name="userName" placeholder="User Name" formControlName="UserName">
+      <input type="text" id="email" class="fadeIn second" ngModel name="email" placeholder="Email" formControlName="UserID" >
+      <div class="invalid-feedback" [ngStyle]="{'color':'red'}" *ngIf="!form.get('UserID').valid && form.get('UserID').touched">Please enter valid email address</div>
+      <p [ngStyle]="{'color':'red'}" *ngIf="!form.get('UserID').valid && form.get('UserID').touched">Please enter valid email address</p>
+      <input type="submit" class="fadeIn fourth" [disabled]="!form.valid" value="Sign-Up">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/log-in">Already have an account?</a>
+    </div>
+
+  </div>
+</div>
